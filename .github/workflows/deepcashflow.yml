@@ -1,6 +1,8 @@
 name: DeepCashFlow
 
 on:
+  schedule:
+    - cron: '0 1 * * *'  # Setiap hari jam 08.00 WITA
   push:
     branches: [main]
   workflow_dispatch:
@@ -22,4 +24,6 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
         run: python main.py
