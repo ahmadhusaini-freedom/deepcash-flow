@@ -1,0 +1,16 @@
+# Jangan commit file sensitif ini!
+setup/client_secret.json
+setup/youtube_tokens.json
+setup/*.json
+
+# Output dan cache
+output/
+__pycache__/
+*.pyc
+*.pyo
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
