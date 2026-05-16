@@ -14,7 +14,8 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dependencies
-        run: pip install google-auth-oauthlib google-auth-httplib2 google-api-python-client requests gspread
+        run: - name: Install dependencies
+        run: pip install -r requirements.txt
       - name: Run main script
         env:
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
