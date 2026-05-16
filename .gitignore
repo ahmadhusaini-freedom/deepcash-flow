@@ -14,3 +14,8 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+
+client_secret*.json
+setup/client_secret.json
+setup/youtube_token.json
+*.json
